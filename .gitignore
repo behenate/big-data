@@ -1,0 +1,10 @@
+**/.history/
+**/__pycache__/
+**/bin/
+**/include/
+**/lib/
+**/*.out
+**/build/
+**/.vscode/
+**/.idea/
+**/.DS_Store
