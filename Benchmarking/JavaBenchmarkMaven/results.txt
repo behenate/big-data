@@ -1,0 +1,91 @@
+Benchmark                      (size)    Mode    Cnt     Score    Error  Units
+Main.multiplyMatrices               1  sample  276815  ≈ 10⁻⁵           ms/op
+Main.multiplyMatrices:p0.00         1  sample             ≈ 0           ms/op
+Main.multiplyMatrices:p0.50         1  sample             ≈ 0           ms/op
+Main.multiplyMatrices:p0.90         1  sample          ≈ 10⁻⁴           ms/op
+Main.multiplyMatrices:p0.95         1  sample          ≈ 10⁻⁴           ms/op
+Main.multiplyMatrices:p0.99         1  sample          ≈ 10⁻⁴           ms/op
+Main.multiplyMatrices:p0.999        1  sample          ≈ 10⁻⁴           ms/op
+Main.multiplyMatrices:p0.9999       1  sample          ≈ 10⁻⁴           ms/op
+Main.multiplyMatrices:p1.00         1  sample           0.015           ms/op
+Main.multiplyMatrices               5  sample  226653  ≈ 10⁻⁴           ms/op
+Main.multiplyMatrices:p0.00         5  sample          ≈ 10⁻⁴           ms/op
+Main.multiplyMatrices:p0.50         5  sample          ≈ 10⁻⁴           ms/op
+Main.multiplyMatrices:p0.90         5  sample          ≈ 10⁻⁴           ms/op
+Main.multiplyMatrices:p0.95         5  sample          ≈ 10⁻⁴           ms/op
+Main.multiplyMatrices:p0.99         5  sample          ≈ 10⁻⁴           ms/op
+Main.multiplyMatrices:p0.999        5  sample          ≈ 10⁻⁴           ms/op
+Main.multiplyMatrices:p0.9999       5  sample           0.007           ms/op
+Main.multiplyMatrices:p1.00         5  sample           0.013           ms/op
+Main.multiplyMatrices              10  sample  285439   0.001 ±  0.001  ms/op
+Main.multiplyMatrices:p0.00        10  sample          ≈ 10⁻³           ms/op
+Main.multiplyMatrices:p0.50        10  sample           0.001           ms/op
+Main.multiplyMatrices:p0.90        10  sample           0.001           ms/op
+Main.multiplyMatrices:p0.95        10  sample           0.001           ms/op
+Main.multiplyMatrices:p0.99        10  sample           0.001           ms/op
+Main.multiplyMatrices:p0.999       10  sample           0.001           ms/op
+Main.multiplyMatrices:p0.9999      10  sample           0.010           ms/op
+Main.multiplyMatrices:p1.00        10  sample           0.045           ms/op
+Main.multiplyMatrices              50  sample  158656   0.063 ±  0.001  ms/op
+Main.multiplyMatrices:p0.00        50  sample           0.058           ms/op
+Main.multiplyMatrices:p0.50        50  sample           0.062           ms/op
+Main.multiplyMatrices:p0.90        50  sample           0.065           ms/op
+Main.multiplyMatrices:p0.95        50  sample           0.067           ms/op
+Main.multiplyMatrices:p0.99        50  sample           0.074           ms/op
+Main.multiplyMatrices:p0.999       50  sample           0.079           ms/op
+Main.multiplyMatrices:p0.9999      50  sample           0.113           ms/op
+Main.multiplyMatrices:p1.00        50  sample           0.230           ms/op
+Main.multiplyMatrices             100  sample  18807     0.534 ±  0.001  ms/op
+Main.multiplyMatrices:p0.00       100  sample            0.493           ms/op
+Main.multiplyMatrices:p0.50       100  sample            0.530           ms/op
+Main.multiplyMatrices:p0.90       100  sample            0.544           ms/op
+Main.multiplyMatrices:p0.95       100  sample            0.553           ms/op
+Main.multiplyMatrices:p0.99       100  sample            0.578           ms/op
+Main.multiplyMatrices:p0.999      100  sample            0.665           ms/op
+Main.multiplyMatrices:p0.9999     100  sample            0.688           ms/op
+Main.multiplyMatrices:p1.00       100  sample            0.714           ms/op
+Main.multiplyMatrices             200  sample   2061     4.882 ±  0.006  ms/op
+Main.multiplyMatrices:p0.00       200  sample            4.760           ms/op
+Main.multiplyMatrices:p0.50       200  sample            4.858           ms/op
+Main.multiplyMatrices:p0.90       200  sample            4.964           ms/op
+Main.multiplyMatrices:p0.95       200  sample            5.014           ms/op
+Main.multiplyMatrices:p0.99       200  sample            5.184           ms/op
+Main.multiplyMatrices:p0.999      200  sample            5.357           ms/op
+Main.multiplyMatrices:p0.9999     200  sample            6.480           ms/op
+Main.multiplyMatrices:p1.00       200  sample            6.480           ms/op
+Main.multiplyMatrices             300  sample    570    17.725 ±  0.024  ms/op
+Main.multiplyMatrices:p0.00       300  sample           17.433           ms/op
+Main.multiplyMatrices:p0.50       300  sample           17.662           ms/op
+Main.multiplyMatrices:p0.90       300  sample           18.022           ms/op
+Main.multiplyMatrices:p0.95       300  sample           18.153           ms/op
+Main.multiplyMatrices:p0.99       300  sample           18.261           ms/op
+Main.multiplyMatrices:p0.999      300  sample           18.743           ms/op
+Main.multiplyMatrices:p0.9999     300  sample           18.743           ms/op
+Main.multiplyMatrices:p1.00       300  sample           18.743           ms/op
+Main.multiplyMatrices             500  sample    120    87.275 ±  0.669  ms/op
+Main.multiplyMatrices:p0.00       500  sample           85.328           ms/op
+Main.multiplyMatrices:p0.50       500  sample           86.245           ms/op
+Main.multiplyMatrices:p0.90       500  sample           91.567           ms/op
+Main.multiplyMatrices:p0.95       500  sample           92.923           ms/op
+Main.multiplyMatrices:p0.99       500  sample           93.634           ms/op
+Main.multiplyMatrices:p0.999      500  sample           93.716           ms/op
+Main.multiplyMatrices:p0.9999     500  sample           93.716           ms/op
+Main.multiplyMatrices:p1.00       500  sample           93.716           ms/op
+Main.multiplyMatrices            1000  sample     20   920.859 ± 20.387  ms/op
+Main.multiplyMatrices:p0.00      1000  sample          880.804           ms/op
+Main.multiplyMatrices:p0.50      1000  sample          916.980           ms/op
+Main.multiplyMatrices:p0.90      1000  sample          954.204           ms/op
+Main.multiplyMatrices:p0.95      1000  sample          964.166           ms/op
+Main.multiplyMatrices:p0.99      1000  sample          964.690           ms/op
+Main.multiplyMatrices:p0.999     1000  sample          964.690           ms/op
+Main.multiplyMatrices:p0.9999    1000  sample          964.690           ms/op
+Main.multiplyMatrices:p1.00      1000  sample          964.690           ms/op
+Main.multiplyMatrices            1500  sample     10  4064.281 ± 16.373  ms/op
+Main.multiplyMatrices:p0.00      1500  sample         4039.115           ms/op
+Main.multiplyMatrices:p0.50      1500  sample         4066.378           ms/op
+Main.multiplyMatrices:p0.90      1500  sample         4076.444           ms/op
+Main.multiplyMatrices:p0.95      1500  sample         4076.863           ms/op
+Main.multiplyMatrices:p0.99      1500  sample         4076.863           ms/op
+Main.multiplyMatrices:p0.999     1500  sample         4076.863           ms/op
+Main.multiplyMatrices:p0.9999    1500  sample         4076.863           ms/op
+Main.multiplyMatrices:p1.00      1500  sample         4076.863           ms/op

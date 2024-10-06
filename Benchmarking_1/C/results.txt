@@ -1,0 +1,23 @@
+Size: 1, Min time: 0 ns, Max time: 42 ns, Avg time: 12 ns, Median time: 0 ns
+Size: 5, Min time: 125 ns, Max time: 334 ns, Avg time: 208 ns, Median time: 187 ns
+Size: 10, Min time: 625 ns, Max time: 875 ns, Avg time: 733 ns, Median time: 708 ns
+Size: 50, Min time: 108834 ns, Max time: 109334 ns, Avg time: 109083 ns, Median time: 109062 ns
+Size: 100, Min time: 927000 ns, Max time: 1156542 ns, Avg time: 1049191 ns, Median time: 1031688 ns
+Size: 150, Min time: 2803833 ns, Max time: 3665292 ns, Avg time: 3149391 ns, Median time: 3113396 ns
+Size: 200, Min time: 6301417 ns, Max time: 7149250 ns, Avg time: 6539216 ns, Median time: 6362249 ns
+Size: 500, Min time: 114875209 ns, Max time: 117697625 ns, Avg time: 115395454 ns, Median time: 115026479 ns
+Size: 1000, Min time: 980939250 ns, Max time: 1163346042 ns, Avg time: 1056438320 ns, Median time: 1041766646 ns
+Size: 1500, Min time: 6825023666 ns, Max time: 7226068375 ns, Avg time: 7032894891 ns, Median time: 6993858604 ns
+
+
+
+Size: 1, Min time: 0 ms, Max time: 0.000042 ms, Avg time: 0.000012 ms, Median time: 0 ms
+Size: 5, Min time: 0.000125 ms, Max time: 0.000334 ms, Avg time: 0.000208 ms, Median time: 0.000187 ms
+Size: 10, Min time: 0.000625 ms, Max time: 0.000875 ms, Avg time: 0.000733 ms, Median time: 0.000708 ms
+Size: 50, Min time: 0.108834 ms, Max time: 0.109334 ms, Avg time: 0.109083 ms, Median time: 0.109062 ms
+Size: 100, Min time: 0.927 ms, Max time: 1.156542 ms, Avg time: 1.049191 ms, Median time: 1.031688 ms
+Size: 150, Min time: 2.803833 ms, Max time: 3.665292 ms, Avg time: 3.149391 ms, Median time: 3.113396 ms
+Size: 200, Min time: 6.301417 ms, Max time: 7.149250 ms, Avg time: 6.539216 ms, Median time: 6.362249 ms
+Size: 500, Min time: 114.875209 ms, Max time: 117.697625 ms, Avg time: 115.395454 ms, Median time: 115.026479 ms
+Size: 1000, Min time: 980.939250 ms, Max time: 1163.346042 ms, Avg time: 1056.438320 ms, Median time: 1041.766646 ms
+Size: 1500, Min time: 6825.023666 ms, Max time: 7226.068375 ms, Avg time: 7032.894891 ms, Median time: 6993.858604 ms
