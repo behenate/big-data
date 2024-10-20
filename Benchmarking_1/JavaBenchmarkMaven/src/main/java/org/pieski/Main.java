@@ -22,7 +22,7 @@ public class Main {
 
     new Runner(opt).run();
   }
-  @Param({ "1", "5", "10", "50" })
+  @Param({ "1", "5", "10", "50", "100", "200", "300", "500", "1000", "1500", "2000"})
   public int size;
   private double[][] matrix1;
   private double[][] matrix2;
