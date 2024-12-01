@@ -1,0 +1,581 @@
+----------------------------------------------------
+Max speed
+----------------------------------------------------
+
+
+Benchmark                                             (size)    Mode    Cnt      Score      Error  Units
+Task3Main.blockedColumnMultiply                            1  sample  24328     ≈ 10⁻⁴             ms/op
+Task3Main.blockedColumnMultiply:p0.00                      1  sample               ≈ 0             ms/op
+Task3Main.blockedColumnMultiply:p0.50                      1  sample               ≈ 0             ms/op
+Task3Main.blockedColumnMultiply:p0.90                      1  sample            ≈ 10⁻⁴             ms/op
+Task3Main.blockedColumnMultiply:p0.95                      1  sample            ≈ 10⁻⁴             ms/op
+Task3Main.blockedColumnMultiply:p0.99                      1  sample            ≈ 10⁻⁴             ms/op
+Task3Main.blockedColumnMultiply:p0.999                     1  sample             0.019             ms/op
+Task3Main.blockedColumnMultiply:p0.9999                    1  sample             0.153             ms/op
+Task3Main.blockedColumnMultiply:p1.00                      1  sample             0.295             ms/op
+Task3Main.blockedColumnMultiply                            5  sample  39596     ≈ 10⁻³             ms/op
+Task3Main.blockedColumnMultiply:p0.00                      5  sample            ≈ 10⁻⁴             ms/op
+Task3Main.blockedColumnMultiply:p0.50                      5  sample            ≈ 10⁻⁴             ms/op
+Task3Main.blockedColumnMultiply:p0.90                      5  sample            ≈ 10⁻⁴             ms/op
+Task3Main.blockedColumnMultiply:p0.95                      5  sample            ≈ 10⁻⁴             ms/op
+Task3Main.blockedColumnMultiply:p0.99                      5  sample            ≈ 10⁻³             ms/op
+Task3Main.blockedColumnMultiply:p0.999                     5  sample             0.024             ms/op
+Task3Main.blockedColumnMultiply:p0.9999                    5  sample             0.148             ms/op
+Task3Main.blockedColumnMultiply:p1.00                      5  sample             6.463             ms/op
+Task3Main.blockedColumnMultiply                           10  sample  21145      0.001 ±    0.001  ms/op
+Task3Main.blockedColumnMultiply:p0.00                     10  sample            ≈ 10⁻³             ms/op
+Task3Main.blockedColumnMultiply:p0.50                     10  sample             0.001             ms/op
+Task3Main.blockedColumnMultiply:p0.90                     10  sample             0.001             ms/op
+Task3Main.blockedColumnMultiply:p0.95                     10  sample             0.001             ms/op
+Task3Main.blockedColumnMultiply:p0.99                     10  sample             0.014             ms/op
+Task3Main.blockedColumnMultiply:p0.999                    10  sample             0.059             ms/op
+Task3Main.blockedColumnMultiply:p0.9999                   10  sample             0.166             ms/op
+Task3Main.blockedColumnMultiply:p1.00                     10  sample             0.431             ms/op
+Task3Main.blockedColumnMultiply                           50  sample  13381      0.074 ±    0.002  ms/op
+Task3Main.blockedColumnMultiply:p0.00                     50  sample             0.042             ms/op
+Task3Main.blockedColumnMultiply:p0.50                     50  sample             0.044             ms/op
+Task3Main.blockedColumnMultiply:p0.90                     50  sample             0.138             ms/op
+Task3Main.blockedColumnMultiply:p0.95                     50  sample             0.186             ms/op
+Task3Main.blockedColumnMultiply:p0.99                     50  sample             0.346             ms/op
+Task3Main.blockedColumnMultiply:p0.999                    50  sample             1.159             ms/op
+Task3Main.blockedColumnMultiply:p0.9999                   50  sample             3.325             ms/op
+Task3Main.blockedColumnMultiply:p1.00                     50  sample             3.666             ms/op
+Task3Main.blockedColumnMultiply                          100  sample   2917      0.343 ±    0.009  ms/op
+Task3Main.blockedColumnMultiply:p0.00                    100  sample             0.326             ms/op
+Task3Main.blockedColumnMultiply:p0.50                    100  sample             0.332             ms/op
+Task3Main.blockedColumnMultiply:p0.90                    100  sample             0.356             ms/op
+Task3Main.blockedColumnMultiply:p0.95                    100  sample             0.367             ms/op
+Task3Main.blockedColumnMultiply:p0.99                    100  sample             0.387             ms/op
+Task3Main.blockedColumnMultiply:p0.999                   100  sample             3.277             ms/op
+Task3Main.blockedColumnMultiply:p0.9999                  100  sample             5.521             ms/op
+Task3Main.blockedColumnMultiply:p1.00                    100  sample             5.521             ms/op
+Task3Main.blockedColumnMultiply                          200  sample    182      5.530 ±    1.410  ms/op
+Task3Main.blockedColumnMultiply:p0.00                    200  sample             2.511             ms/op
+Task3Main.blockedColumnMultiply:p0.50                    200  sample             4.891             ms/op
+Task3Main.blockedColumnMultiply:p0.90                    200  sample             7.270             ms/op
+Task3Main.blockedColumnMultiply:p0.95                    200  sample             9.377             ms/op
+Task3Main.blockedColumnMultiply:p0.99                    200  sample            29.304             ms/op
+Task3Main.blockedColumnMultiply:p0.999                   200  sample            75.104             ms/op
+Task3Main.blockedColumnMultiply:p0.9999                  200  sample            75.104             ms/op
+Task3Main.blockedColumnMultiply:p1.00                    200  sample            75.104             ms/op
+Task3Main.blockedColumnMultiply                          300  sample    100     10.071 ±    0.371  ms/op
+Task3Main.blockedColumnMultiply:p0.00                    300  sample             9.683             ms/op
+Task3Main.blockedColumnMultiply:p0.50                    300  sample             9.929             ms/op
+Task3Main.blockedColumnMultiply:p0.90                    300  sample            10.207             ms/op
+Task3Main.blockedColumnMultiply:p0.95                    300  sample            10.337             ms/op
+Task3Main.blockedColumnMultiply:p0.99                    300  sample            20.672             ms/op
+Task3Main.blockedColumnMultiply:p0.999                   300  sample            20.775             ms/op
+Task3Main.blockedColumnMultiply:p0.9999                  300  sample            20.775             ms/op
+Task3Main.blockedColumnMultiply:p1.00                    300  sample            20.775             ms/op
+Task3Main.blockedColumnMultiply                          500  sample     14     78.610 ±   32.111  ms/op
+Task3Main.blockedColumnMultiply:p0.00                    500  sample            47.645             ms/op
+Task3Main.blockedColumnMultiply:p0.50                    500  sample            78.447             ms/op
+Task3Main.blockedColumnMultiply:p0.90                    500  sample           114.491             ms/op
+Task3Main.blockedColumnMultiply:p0.95                    500  sample           114.688             ms/op
+Task3Main.blockedColumnMultiply:p0.99                    500  sample           114.688             ms/op
+Task3Main.blockedColumnMultiply:p0.999                   500  sample           114.688             ms/op
+Task3Main.blockedColumnMultiply:p0.9999                  500  sample           114.688             ms/op
+Task3Main.blockedColumnMultiply:p1.00                    500  sample           114.688             ms/op
+Task3Main.blockedColumnMultiply                         1000  sample      3    463.471 ± 1573.895  ms/op
+Task3Main.blockedColumnMultiply:p0.00                   1000  sample           413.139             ms/op
+Task3Main.blockedColumnMultiply:p0.50                   1000  sample           414.188             ms/op
+Task3Main.blockedColumnMultiply:p0.90                   1000  sample           563.085             ms/op
+Task3Main.blockedColumnMultiply:p0.95                   1000  sample           563.085             ms/op
+Task3Main.blockedColumnMultiply:p0.99                   1000  sample           563.085             ms/op
+Task3Main.blockedColumnMultiply:p0.999                  1000  sample           563.085             ms/op
+Task3Main.blockedColumnMultiply:p0.9999                 1000  sample           563.085             ms/op
+Task3Main.blockedColumnMultiply:p1.00                   1000  sample           563.085             ms/op
+Task3Main.blockedColumnMultiply                         1500  sample          2462.056             ms/op
+Task3Main.blockedColumnMultiply:p0.00                   1500  sample          2462.056             ms/op
+Task3Main.blockedColumnMultiply:p0.50                   1500  sample          2462.056             ms/op
+Task3Main.blockedColumnMultiply:p0.90                   1500  sample          2462.056             ms/op
+Task3Main.blockedColumnMultiply:p0.95                   1500  sample          2462.056             ms/op
+Task3Main.blockedColumnMultiply:p0.99                   1500  sample          2462.056             ms/op
+Task3Main.blockedColumnMultiply:p0.999                  1500  sample          2462.056             ms/op
+Task3Main.blockedColumnMultiply:p0.9999                 1500  sample          2462.056             ms/op
+Task3Main.blockedColumnMultiply:p1.00                   1500  sample          2462.056             ms/op
+Task3Main.blockedColumnMultiply                         2000  sample          4588.569             ms/op
+Task3Main.blockedColumnMultiply:p0.00                   2000  sample          4588.569             ms/op
+Task3Main.blockedColumnMultiply:p0.50                   2000  sample          4588.569             ms/op
+Task3Main.blockedColumnMultiply:p0.90                   2000  sample          4588.569             ms/op
+Task3Main.blockedColumnMultiply:p0.95                   2000  sample          4588.569             ms/op
+Task3Main.blockedColumnMultiply:p0.99                   2000  sample          4588.569             ms/op
+Task3Main.blockedColumnMultiply:p0.999                  2000  sample          4588.569             ms/op
+Task3Main.blockedColumnMultiply:p0.9999                 2000  sample          4588.569             ms/op
+Task3Main.blockedColumnMultiply:p1.00                   2000  sample          4588.569             ms/op
+Task3Main.multithreadedBlockedColumnMultiply               1  sample  13013      0.039 ±    0.001  ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.00         1  sample             0.021             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.50         1  sample             0.034             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.90         1  sample             0.056             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.95         1  sample             0.070             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.99         1  sample             0.090             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.999        1  sample             0.174             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.9999       1  sample             1.294             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p1.00         1  sample             1.358             ms/op
+Task3Main.multithreadedBlockedColumnMultiply               5  sample   6831      0.146 ±    0.003  ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.00         5  sample             0.089             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.50         5  sample             0.135             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.90         5  sample             0.167             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.95         5  sample             0.183             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.99         5  sample             0.772             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.999        5  sample             1.191             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.9999       5  sample             1.483             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p1.00         5  sample             1.483             ms/op
+Task3Main.multithreadedBlockedColumnMultiply              10  sample   3145      0.317 ±    0.007  ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.00        10  sample             0.205             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.50        10  sample             0.298             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.90        10  sample             0.349             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.95        10  sample             0.373             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.99        10  sample             0.960             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.999       10  sample             1.380             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.9999      10  sample             1.989             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p1.00        10  sample             1.989             ms/op
+Task3Main.multithreadedBlockedColumnMultiply              50  sample   2890      0.346 ±    0.014  ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.00        50  sample             0.205             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.50        50  sample             0.290             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.90        50  sample             0.501             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.95        50  sample             0.697             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.99        50  sample             1.152             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.999       50  sample             4.093             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.9999      50  sample             5.767             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p1.00        50  sample             5.767             ms/op
+Task3Main.multithreadedBlockedColumnMultiply             100  sample   2046      0.490 ±    0.046  ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.00       100  sample             0.273             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.50       100  sample             0.392             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.90       100  sample             0.687             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.95       100  sample             1.003             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.99       100  sample             1.630             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.999      100  sample             6.488             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.9999     100  sample            24.969             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p1.00       100  sample            24.969             ms/op
+Task3Main.multithreadedBlockedColumnMultiply             200  sample    943      1.060 ±    0.152  ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.00       200  sample             0.829             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.50       200  sample             0.978             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.90       200  sample             1.115             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.95       200  sample             1.414             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.99       200  sample             1.597             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.999      200  sample            44.106             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.9999     200  sample            44.106             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p1.00       200  sample            44.106             ms/op
+Task3Main.multithreadedBlockedColumnMultiply             300  sample    304      3.301 ±    1.178  ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.00       300  sample             2.257             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.50       300  sample             2.777             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.90       300  sample             3.254             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.95       300  sample             3.469             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.99       300  sample             7.997             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.999      300  sample           109.969             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.9999     300  sample           109.969             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p1.00       300  sample           109.969             ms/op
+Task3Main.multithreadedBlockedColumnMultiply             500  sample     71     14.231 ±    3.840  ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.00       500  sample             9.028             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.50       500  sample            11.059             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.90       500  sample            22.787             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.95       500  sample            29.065             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.99       500  sample            74.711             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.999      500  sample            74.711             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.9999     500  sample            74.711             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p1.00       500  sample            74.711             ms/op
+Task3Main.multithreadedBlockedColumnMultiply            1000  sample     15     70.368 ±   10.432  ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.00      1000  sample            61.014             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.50      1000  sample            67.502             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.90      1000  sample            89.260             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.95      1000  sample           101.843             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.99      1000  sample           101.843             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.999     1000  sample           101.843             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.9999    1000  sample           101.843             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p1.00      1000  sample           101.843             ms/op
+Task3Main.multithreadedBlockedColumnMultiply            1500  sample      4    266.928 ±  367.303  ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.00      1500  sample           218.366             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.50      1500  sample           259.260             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.90      1500  sample           330.826             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.95      1500  sample           330.826             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.99      1500  sample           330.826             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.999     1500  sample           330.826             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.9999    1500  sample           330.826             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p1.00      1500  sample           330.826             ms/op
+Task3Main.multithreadedBlockedColumnMultiply            2000  sample      2    546.832             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.00      2000  sample           542.114             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.50      2000  sample           546.832             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.90      2000  sample           551.551             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.95      2000  sample           551.551             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.99      2000  sample           551.551             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.999     2000  sample           551.551             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p0.9999    2000  sample           551.551             ms/op
+Task3Main.multithreadedBlockedColumnMultiply:p1.00      2000  sample           551.551             ms/op
+Task3Main.multithreadedExecutorMultiply                    1  sample  13524      0.038 ±    0.001  ms/op
+Task3Main.multithreadedExecutorMultiply:p0.00              1  sample             0.023             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.50              1  sample             0.033             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.90              1  sample             0.041             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.95              1  sample             0.049             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.99              1  sample             0.080             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.999             1  sample             0.918             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.9999            1  sample             1.423             ms/op
+Task3Main.multithreadedExecutorMultiply:p1.00              1  sample             1.475             ms/op
+Task3Main.multithreadedExecutorMultiply                    5  sample   8911      0.112 ±    0.006  ms/op
+Task3Main.multithreadedExecutorMultiply:p0.00              5  sample             0.047             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.50              5  sample             0.094             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.90              5  sample             0.133             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.95              5  sample             0.164             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.99              5  sample             0.469             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.999             5  sample             1.906             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.9999            5  sample             8.536             ms/op
+Task3Main.multithreadedExecutorMultiply:p1.00              5  sample             8.536             ms/op
+Task3Main.multithreadedExecutorMultiply                   10  sample   6218      0.161 ±    0.004  ms/op
+Task3Main.multithreadedExecutorMultiply:p0.00             10  sample             0.077             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.50             10  sample             0.131             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.90             10  sample             0.246             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.95             10  sample             0.280             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.99             10  sample             0.725             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.999            10  sample             1.297             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.9999           10  sample             1.552             ms/op
+Task3Main.multithreadedExecutorMultiply:p1.00             10  sample             1.552             ms/op
+Task3Main.multithreadedExecutorMultiply                   50  sample   2796      0.358 ±    0.013  ms/op
+Task3Main.multithreadedExecutorMultiply:p0.00             50  sample             0.215             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.50             50  sample             0.329             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.90             50  sample             0.416             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.95             50  sample             0.479             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.99             50  sample             0.923             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.999            50  sample             2.652             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.9999           50  sample             6.717             ms/op
+Task3Main.multithreadedExecutorMultiply:p1.00             50  sample             6.717             ms/op
+Task3Main.multithreadedExecutorMultiply                  100  sample   1517      0.658 ±    0.039  ms/op
+Task3Main.multithreadedExecutorMultiply:p0.00            100  sample             0.467             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.50            100  sample             0.614             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.90            100  sample             0.780             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.95            100  sample             0.876             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.99            100  sample             1.131             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.999           100  sample            10.635             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.9999          100  sample            17.531             ms/op
+Task3Main.multithreadedExecutorMultiply:p1.00            100  sample            17.531             ms/op
+Task3Main.multithreadedExecutorMultiply                  200  sample    477      2.097 ±    0.278  ms/op
+Task3Main.multithreadedExecutorMultiply:p0.00            200  sample             1.157             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.50            200  sample             1.585             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.90            200  sample             2.821             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.95            200  sample             3.577             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.99            200  sample             9.312             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.999           200  sample            25.166             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.9999          200  sample            25.166             ms/op
+Task3Main.multithreadedExecutorMultiply:p1.00            200  sample            25.166             ms/op
+Task3Main.multithreadedExecutorMultiply                  300  sample    274      3.676 ±    0.433  ms/op
+Task3Main.multithreadedExecutorMultiply:p0.00            300  sample             2.949             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.50            300  sample             3.369             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.90            300  sample             4.211             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.95            300  sample             4.723             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.99            300  sample             5.689             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.999           300  sample            38.273             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.9999          300  sample            38.273             ms/op
+Task3Main.multithreadedExecutorMultiply:p1.00            300  sample            38.273             ms/op
+Task3Main.multithreadedExecutorMultiply                  500  sample     53     18.985 ±    3.237  ms/op
+Task3Main.multithreadedExecutorMultiply:p0.00            500  sample            16.679             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.50            500  sample            17.596             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.90            500  sample            20.342             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.95            500  sample            23.341             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.99            500  sample            66.191             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.999           500  sample            66.191             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.9999          500  sample            66.191             ms/op
+Task3Main.multithreadedExecutorMultiply:p1.00            500  sample            66.191             ms/op
+Task3Main.multithreadedExecutorMultiply                 1000  sample      7    160.919 ±   35.091  ms/op
+Task3Main.multithreadedExecutorMultiply:p0.00           1000  sample           150.209             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.50           1000  sample           154.403             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.90           1000  sample           193.987             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.95           1000  sample           193.987             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.99           1000  sample           193.987             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.999          1000  sample           193.987             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.9999         1000  sample           193.987             ms/op
+Task3Main.multithreadedExecutorMultiply:p1.00           1000  sample           193.987             ms/op
+Task3Main.multithreadedExecutorMultiply                 1500  sample      2    783.811             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.00           1500  sample           729.809             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.50           1500  sample           783.811             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.90           1500  sample           837.812             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.95           1500  sample           837.812             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.99           1500  sample           837.812             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.999          1500  sample           837.812             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.9999         1500  sample           837.812             ms/op
+Task3Main.multithreadedExecutorMultiply:p1.00           1500  sample           837.812             ms/op
+Task3Main.multithreadedExecutorMultiply                 2000  sample          2044.723             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.00           2000  sample          2044.723             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.50           2000  sample          2044.723             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.90           2000  sample          2044.723             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.95           2000  sample          2044.723             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.99           2000  sample          2044.723             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.999          2000  sample          2044.723             ms/op
+Task3Main.multithreadedExecutorMultiply:p0.9999         2000  sample          2044.723             ms/op
+Task3Main.multithreadedExecutorMultiply:p1.00           2000  sample          2044.723             ms/op
+Task3Main.multithreadedStreamMultiply                      1  sample  26597     ≈ 10⁻⁴             ms/op
+Task3Main.multithreadedStreamMultiply:p0.00                1  sample               ≈ 0             ms/op
+Task3Main.multithreadedStreamMultiply:p0.50                1  sample            ≈ 10⁻⁴             ms/op
+Task3Main.multithreadedStreamMultiply:p0.90                1  sample            ≈ 10⁻⁴             ms/op
+Task3Main.multithreadedStreamMultiply:p0.95                1  sample            ≈ 10⁻⁴             ms/op
+Task3Main.multithreadedStreamMultiply:p0.99                1  sample            ≈ 10⁻⁴             ms/op
+Task3Main.multithreadedStreamMultiply:p0.999               1  sample             0.007             ms/op
+Task3Main.multithreadedStreamMultiply:p0.9999              1  sample             1.036             ms/op
+Task3Main.multithreadedStreamMultiply:p1.00                1  sample             1.491             ms/op
+Task3Main.multithreadedStreamMultiply                      5  sample  33695      0.008 ±    0.001  ms/op
+Task3Main.multithreadedStreamMultiply:p0.00                5  sample            ≈ 10⁻⁴             ms/op
+Task3Main.multithreadedStreamMultiply:p0.50                5  sample             0.006             ms/op
+Task3Main.multithreadedStreamMultiply:p0.90                5  sample             0.017             ms/op
+Task3Main.multithreadedStreamMultiply:p0.95                5  sample             0.021             ms/op
+Task3Main.multithreadedStreamMultiply:p0.99                5  sample             0.032             ms/op
+Task3Main.multithreadedStreamMultiply:p0.999               5  sample             0.067             ms/op
+Task3Main.multithreadedStreamMultiply:p0.9999              5  sample             0.931             ms/op
+Task3Main.multithreadedStreamMultiply:p1.00                5  sample             2.001             ms/op
+Task3Main.multithreadedStreamMultiply                     10  sample  29622      0.017 ±    0.001  ms/op
+Task3Main.multithreadedStreamMultiply:p0.00               10  sample             0.001             ms/op
+Task3Main.multithreadedStreamMultiply:p0.50               10  sample             0.015             ms/op
+Task3Main.multithreadedStreamMultiply:p0.90               10  sample             0.031             ms/op
+Task3Main.multithreadedStreamMultiply:p0.95               10  sample             0.037             ms/op
+Task3Main.multithreadedStreamMultiply:p0.99               10  sample             0.049             ms/op
+Task3Main.multithreadedStreamMultiply:p0.999              10  sample             0.097             ms/op
+Task3Main.multithreadedStreamMultiply:p0.9999             10  sample             4.161             ms/op
+Task3Main.multithreadedStreamMultiply:p1.00               10  sample             9.994             ms/op
+Task3Main.multithreadedStreamMultiply                     50  sample  10947      0.047 ±    0.004  ms/op
+Task3Main.multithreadedStreamMultiply:p0.00               50  sample             0.016             ms/op
+Task3Main.multithreadedStreamMultiply:p0.50               50  sample             0.042             ms/op
+Task3Main.multithreadedStreamMultiply:p0.90               50  sample             0.058             ms/op
+Task3Main.multithreadedStreamMultiply:p0.95               50  sample             0.064             ms/op
+Task3Main.multithreadedStreamMultiply:p0.99               50  sample             0.100             ms/op
+Task3Main.multithreadedStreamMultiply:p0.999              50  sample             0.441             ms/op
+Task3Main.multithreadedStreamMultiply:p0.9999             50  sample             9.167             ms/op
+Task3Main.multithreadedStreamMultiply:p1.00               50  sample             9.388             ms/op
+Task3Main.multithreadedStreamMultiply                    100  sample   4769      0.210 ±    0.015  ms/op
+Task3Main.multithreadedStreamMultiply:p0.00              100  sample             0.090             ms/op
+Task3Main.multithreadedStreamMultiply:p0.50              100  sample             0.151             ms/op
+Task3Main.multithreadedStreamMultiply:p0.90              100  sample             0.322             ms/op
+Task3Main.multithreadedStreamMultiply:p0.95              100  sample             0.581             ms/op
+Task3Main.multithreadedStreamMultiply:p0.99              100  sample             0.761             ms/op
+Task3Main.multithreadedStreamMultiply:p0.999             100  sample             2.809             ms/op
+Task3Main.multithreadedStreamMultiply:p0.9999            100  sample            16.269             ms/op
+Task3Main.multithreadedStreamMultiply:p1.00              100  sample            16.269             ms/op
+Task3Main.multithreadedStreamMultiply                    200  sample   1091      0.922 ±    0.088  ms/op
+Task3Main.multithreadedStreamMultiply:p0.00              200  sample             0.671             ms/op
+Task3Main.multithreadedStreamMultiply:p0.50              200  sample             0.786             ms/op
+Task3Main.multithreadedStreamMultiply:p0.90              200  sample             0.899             ms/op
+Task3Main.multithreadedStreamMultiply:p0.95              200  sample             0.939             ms/op
+Task3Main.multithreadedStreamMultiply:p0.99              200  sample             4.198             ms/op
+Task3Main.multithreadedStreamMultiply:p0.999             200  sample            21.690             ms/op
+Task3Main.multithreadedStreamMultiply:p0.9999            200  sample            23.364             ms/op
+Task3Main.multithreadedStreamMultiply:p1.00              200  sample            23.364             ms/op
+Task3Main.multithreadedStreamMultiply                    300  sample    351      2.863 ±    0.352  ms/op
+Task3Main.multithreadedStreamMultiply:p0.00              300  sample             2.363             ms/op
+Task3Main.multithreadedStreamMultiply:p0.50              300  sample             2.712             ms/op
+Task3Main.multithreadedStreamMultiply:p0.90              300  sample             3.082             ms/op
+Task3Main.multithreadedStreamMultiply:p0.95              300  sample             3.172             ms/op
+Task3Main.multithreadedStreamMultiply:p0.99              300  sample             3.730             ms/op
+Task3Main.multithreadedStreamMultiply:p0.999             300  sample            39.715             ms/op
+Task3Main.multithreadedStreamMultiply:p0.9999            300  sample            39.715             ms/op
+Task3Main.multithreadedStreamMultiply:p1.00              300  sample            39.715             ms/op
+Task3Main.multithreadedStreamMultiply                    500  sample     56     18.068 ±    4.417  ms/op
+Task3Main.multithreadedStreamMultiply:p0.00              500  sample            14.549             ms/op
+Task3Main.multithreadedStreamMultiply:p0.50              500  sample            15.819             ms/op
+Task3Main.multithreadedStreamMultiply:p0.90              500  sample            20.798             ms/op
+Task3Main.multithreadedStreamMultiply:p0.95              500  sample            31.502             ms/op
+Task3Main.multithreadedStreamMultiply:p0.99              500  sample            81.920             ms/op
+Task3Main.multithreadedStreamMultiply:p0.999             500  sample            81.920             ms/op
+Task3Main.multithreadedStreamMultiply:p0.9999            500  sample            81.920             ms/op
+Task3Main.multithreadedStreamMultiply:p1.00              500  sample            81.920             ms/op
+Task3Main.multithreadedStreamMultiply                   1000  sample      6    194.598 ±  175.890  ms/op
+Task3Main.multithreadedStreamMultiply:p0.00             1000  sample           158.597             ms/op
+Task3Main.multithreadedStreamMultiply:p0.50             1000  sample           164.495             ms/op
+Task3Main.multithreadedStreamMultiply:p0.90             1000  sample           318.767             ms/op
+Task3Main.multithreadedStreamMultiply:p0.95             1000  sample           318.767             ms/op
+Task3Main.multithreadedStreamMultiply:p0.99             1000  sample           318.767             ms/op
+Task3Main.multithreadedStreamMultiply:p0.999            1000  sample           318.767             ms/op
+Task3Main.multithreadedStreamMultiply:p0.9999           1000  sample           318.767             ms/op
+Task3Main.multithreadedStreamMultiply:p1.00             1000  sample           318.767             ms/op
+Task3Main.multithreadedStreamMultiply                   1500  sample      2    782.238             ms/op
+Task3Main.multithreadedStreamMultiply:p0.00             1500  sample           779.092             ms/op
+Task3Main.multithreadedStreamMultiply:p0.50             1500  sample           782.238             ms/op
+Task3Main.multithreadedStreamMultiply:p0.90             1500  sample           785.383             ms/op
+Task3Main.multithreadedStreamMultiply:p0.95             1500  sample           785.383             ms/op
+Task3Main.multithreadedStreamMultiply:p0.99             1500  sample           785.383             ms/op
+Task3Main.multithreadedStreamMultiply:p0.999            1500  sample           785.383             ms/op
+Task3Main.multithreadedStreamMultiply:p0.9999           1500  sample           785.383             ms/op
+Task3Main.multithreadedStreamMultiply:p1.00             1500  sample           785.383             ms/op
+Task3Main.multithreadedStreamMultiply                   2000  sample          2659.189             ms/op
+Task3Main.multithreadedStreamMultiply:p0.00             2000  sample          2659.189             ms/op
+Task3Main.multithreadedStreamMultiply:p0.50             2000  sample          2659.189             ms/op
+Task3Main.multithreadedStreamMultiply:p0.90             2000  sample          2659.189             ms/op
+Task3Main.multithreadedStreamMultiply:p0.95             2000  sample          2659.189             ms/op
+Task3Main.multithreadedStreamMultiply:p0.99             2000  sample          2659.189             ms/op
+Task3Main.multithreadedStreamMultiply:p0.999            2000  sample          2659.189             ms/op
+Task3Main.multithreadedStreamMultiply:p0.9999           2000  sample          2659.189             ms/op
+Task3Main.multithreadedStreamMultiply:p1.00             2000  sample          2659.189             ms/op
+Task3Main.standardMultiply                                 1  sample  24062     ≈ 10⁻⁵             ms/op
+Task3Main.standardMultiply:p0.00                           1  sample               ≈ 0             ms/op
+Task3Main.standardMultiply:p0.50                           1  sample               ≈ 0             ms/op
+Task3Main.standardMultiply:p0.90                           1  sample            ≈ 10⁻⁴             ms/op
+Task3Main.standardMultiply:p0.95                           1  sample            ≈ 10⁻⁴             ms/op
+Task3Main.standardMultiply:p0.99                           1  sample            ≈ 10⁻⁴             ms/op
+Task3Main.standardMultiply:p0.999                          1  sample             0.001             ms/op
+Task3Main.standardMultiply:p0.9999                         1  sample             0.013             ms/op
+Task3Main.standardMultiply:p1.00                           1  sample             0.114             ms/op
+Task3Main.standardMultiply                                 5  sample  21589     ≈ 10⁻⁴             ms/op
+Task3Main.standardMultiply:p0.00                           5  sample            ≈ 10⁻⁴             ms/op
+Task3Main.standardMultiply:p0.50                           5  sample            ≈ 10⁻⁴             ms/op
+Task3Main.standardMultiply:p0.90                           5  sample            ≈ 10⁻⁴             ms/op
+Task3Main.standardMultiply:p0.95                           5  sample            ≈ 10⁻⁴             ms/op
+Task3Main.standardMultiply:p0.99                           5  sample            ≈ 10⁻⁴             ms/op
+Task3Main.standardMultiply:p0.999                          5  sample             0.004             ms/op
+Task3Main.standardMultiply:p0.9999                         5  sample             0.014             ms/op
+Task3Main.standardMultiply:p1.00                           5  sample             0.111             ms/op
+Task3Main.standardMultiply                                10  sample  27363      0.001 ±    0.001  ms/op
+Task3Main.standardMultiply:p0.00                          10  sample             0.001             ms/op
+Task3Main.standardMultiply:p0.50                          10  sample             0.001             ms/op
+Task3Main.standardMultiply:p0.90                          10  sample             0.001             ms/op
+Task3Main.standardMultiply:p0.95                          10  sample             0.001             ms/op
+Task3Main.standardMultiply:p0.99                          10  sample             0.001             ms/op
+Task3Main.standardMultiply:p0.999                         10  sample             0.019             ms/op
+Task3Main.standardMultiply:p0.9999                        10  sample             0.029             ms/op
+Task3Main.standardMultiply:p1.00                          10  sample             0.131             ms/op
+Task3Main.standardMultiply                                50  sample  14813      0.068 ±    0.001  ms/op
+Task3Main.standardMultiply:p0.00                          50  sample             0.060             ms/op
+Task3Main.standardMultiply:p0.50                          50  sample             0.063             ms/op
+Task3Main.standardMultiply:p0.90                          50  sample             0.067             ms/op
+Task3Main.standardMultiply:p0.95                          50  sample             0.070             ms/op
+Task3Main.standardMultiply:p0.99                          50  sample             0.161             ms/op
+Task3Main.standardMultiply:p0.999                         50  sample             0.309             ms/op
+Task3Main.standardMultiply:p0.9999                        50  sample             0.973             ms/op
+Task3Main.standardMultiply:p1.00                          50  sample             1.468             ms/op
+Task3Main.standardMultiply                               100  sample   1709      0.585 ±    0.012  ms/op
+Task3Main.standardMultiply:p0.00                         100  sample             0.541             ms/op
+Task3Main.standardMultiply:p0.50                         100  sample             0.558             ms/op
+Task3Main.standardMultiply:p0.90                         100  sample             0.569             ms/op
+Task3Main.standardMultiply:p0.95                         100  sample             0.584             ms/op
+Task3Main.standardMultiply:p0.99                         100  sample             1.348             ms/op
+Task3Main.standardMultiply:p0.999                        100  sample             2.282             ms/op
+Task3Main.standardMultiply:p0.9999                       100  sample             3.899             ms/op
+Task3Main.standardMultiply:p1.00                         100  sample             3.899             ms/op
+Task3Main.standardMultiply                               200  sample    195      5.177 ±    0.120  ms/op
+Task3Main.standardMultiply:p0.00                         200  sample             5.054             ms/op
+Task3Main.standardMultiply:p0.50                         200  sample             5.087             ms/op
+Task3Main.standardMultiply:p0.90                         200  sample             5.197             ms/op
+Task3Main.standardMultiply:p0.95                         200  sample             5.230             ms/op
+Task3Main.standardMultiply:p0.99                         200  sample             8.596             ms/op
+Task3Main.standardMultiply:p0.999                        200  sample             9.650             ms/op
+Task3Main.standardMultiply:p0.9999                       200  sample             9.650             ms/op
+Task3Main.standardMultiply:p1.00                         200  sample             9.650             ms/op
+Task3Main.standardMultiply                               300  sample     54     18.821 ±    0.254  ms/op
+Task3Main.standardMultiply:p0.00                         300  sample            18.252             ms/op
+Task3Main.standardMultiply:p0.50                         300  sample            18.711             ms/op
+Task3Main.standardMultiply:p0.90                         300  sample            19.120             ms/op
+Task3Main.standardMultiply:p0.95                         300  sample            19.243             ms/op
+Task3Main.standardMultiply:p0.99                         300  sample            22.413             ms/op
+Task3Main.standardMultiply:p0.999                        300  sample            22.413             ms/op
+Task3Main.standardMultiply:p0.9999                       300  sample            22.413             ms/op
+Task3Main.standardMultiply:p1.00                         300  sample            22.413             ms/op
+Task3Main.standardMultiply                               500  sample     12     90.156 ±   17.247  ms/op
+Task3Main.standardMultiply:p0.00                         500  sample            85.852             ms/op
+Task3Main.standardMultiply:p0.50                         500  sample            86.311             ms/op
+Task3Main.standardMultiply:p0.90                         500  sample           119.105             ms/op
+Task3Main.standardMultiply:p0.95                         500  sample           132.907             ms/op
+Task3Main.standardMultiply:p0.99                         500  sample           132.907             ms/op
+Task3Main.standardMultiply:p0.999                        500  sample           132.907             ms/op
+Task3Main.standardMultiply:p0.9999                       500  sample           132.907             ms/op
+Task3Main.standardMultiply:p1.00                         500  sample           132.907             ms/op
+Task3Main.standardMultiply                              1000  sample          1254.097             ms/op
+Task3Main.standardMultiply:p0.00                        1000  sample          1254.097             ms/op
+Task3Main.standardMultiply:p0.50                        1000  sample          1254.097             ms/op
+Task3Main.standardMultiply:p0.90                        1000  sample          1254.097             ms/op
+Task3Main.standardMultiply:p0.95                        1000  sample          1254.097             ms/op
+Task3Main.standardMultiply:p0.99                        1000  sample          1254.097             ms/op
+Task3Main.standardMultiply:p0.999                       1000  sample          1254.097             ms/op
+Task3Main.standardMultiply:p0.9999                      1000  sample          1254.097             ms/op
+Task3Main.standardMultiply:p1.00                        1000  sample          1254.097             ms/op
+Task3Main.standardMultiply                              1500  sample          5377.098             ms/op
+Task3Main.standardMultiply:p0.00                        1500  sample          5377.098             ms/op
+Task3Main.standardMultiply:p0.50                        1500  sample          5377.098             ms/op
+Task3Main.standardMultiply:p0.90                        1500  sample          5377.098             ms/op
+Task3Main.standardMultiply:p0.95                        1500  sample          5377.098             ms/op
+Task3Main.standardMultiply:p0.99                        1500  sample          5377.098             ms/op
+Task3Main.standardMultiply:p0.999                       1500  sample          5377.098             ms/op
+Task3Main.standardMultiply:p0.9999                      1500  sample          5377.098             ms/op
+Task3Main.standardMultiply:p1.00                        1500  sample          5377.098             ms/op
+Task3Main.standardMultiply                              2000  sample         15116.272             ms/op
+Task3Main.standardMultiply:p0.00                        2000  sample         15116.272             ms/op
+Task3Main.standardMultiply:p0.50                        2000  sample         15116.272             ms/op
+Task3Main.standardMultiply:p0.90                        2000  sample         15116.272             ms/op
+Task3Main.standardMultiply:p0.95                        2000  sample         15116.272             ms/op
+Task3Main.standardMultiply:p0.99                        2000  sample         15116.272             ms/op
+Task3Main.standardMultiply:p0.999                       2000  sample         15116.272             ms/op
+Task3Main.standardMultiply:p0.9999                      2000  sample         15116.272             ms/op
+Task3Main.standardMultiply:p1.00                        2000  sample         15116.272             ms/op
+
+
+----------------------------------------
+Thread num impact
+----------------------------------------
+Task3Main.multithreadedBlockedColumnMultiply                     0    2500  sample        1279.263          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                     1    2500  sample        6652.166          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                     2    2500  sample        4294.967          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                     3    2500  sample        3061.842          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                     4    2500  sample        2348.810          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                     5    2500  sample        2069.889          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                     6    2500  sample        1772.093          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                     7    2500  sample        1740.636          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                     8    2500  sample        1688.207          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                     9    2500  sample        1497.367          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                    10    2500  sample        1530.921          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                    11    2500  sample        1228.931          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                    12    2500  sample        1319.109          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                    13    2500  sample        1344.274          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                    14    2500  sample        1457.521          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                    15    2500  sample        1407.189          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                    16    2500  sample        1600.127          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                    17    2500  sample        1413.480          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                    18    2500  sample        1533.018          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                    19    2500  sample        1405.092          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                    20    2500  sample        1528.824          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                    21    2500  sample        1199.571          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                    22    2500  sample        1346.372          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                    23    2500  sample        1245.708          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                    24    2500  sample        1312.817          ms/op
+Task3Main.multithreadedExecutorMultiply                          0    2500  sample        5435.818          ms/op
+Task3Main.multithreadedExecutorMultiply                          1    2500  sample       39929.774          ms/op
+Task3Main.multithreadedExecutorMultiply                          2    2500  sample       20602.421          ms/op
+Task3Main.multithreadedExecutorMultiply                          3    2500  sample       13807.649          ms/op
+Task3Main.multithreadedExecutorMultiply                          4    2500  sample       10687.087          ms/op
+Task3Main.multithreadedExecutorMultiply                          5    2500  sample        8539.603          ms/op
+Task3Main.multithreadedExecutorMultiply                          6    2500  sample        8724.152          ms/op
+Task3Main.multithreadedExecutorMultiply                          7    2500  sample        7683.965          ms/op
+Task3Main.multithreadedExecutorMultiply                          8    2500  sample        7415.529          ms/op
+Task3Main.multithreadedExecutorMultiply                          9    2500  sample        7230.980          ms/op
+Task3Main.multithreadedExecutorMultiply                         10    2500  sample        6870.270          ms/op
+Task3Main.multithreadedExecutorMultiply                         11    2500  sample        6786.384          ms/op
+Task3Main.multithreadedExecutorMultiply                         12    2500  sample        6417.285          ms/op
+Task3Main.multithreadedExecutorMultiply                         13    2500  sample        6954.156          ms/op
+Task3Main.multithreadedExecutorMultiply                         14    2500  sample        6509.560          ms/op
+Task3Main.multithreadedExecutorMultiply                         15    2500  sample        6887.047          ms/op
+Task3Main.multithreadedExecutorMultiply                         16    2500  sample        6190.793          ms/op
+Task3Main.multithreadedExecutorMultiply                         17    2500  sample        6308.233          ms/op
+Task3Main.multithreadedExecutorMultiply                         18    2500  sample        6509.560          ms/op
+Task3Main.multithreadedExecutorMultiply                         19    2500  sample        6224.347          ms/op
+Task3Main.multithreadedExecutorMultiply                         20    2500  sample        6257.902          ms/op
+Task3Main.multithreadedExecutorMultiply                         21    2500  sample        6383.731          ms/op
+Task3Main.multithreadedExecutorMultiply                         22    2500  sample        6090.129          ms/op
+Task3Main.multithreadedExecutorMultiply                         23    2500  sample        6417.285          ms/op
+Task3Main.multithreadedExecutorMultiply                         24    2500  sample        5771.362          ms/op
+Task3Main.multithreadedStreamMultiply                            0    2500  sample        7658.799          ms/op
+Task3Main.multithreadedStreamMultiply                            1    2500  sample        8581.546          ms/op
+Task3Main.multithreadedStreamMultiply                            2    2500  sample        7239.369          ms/op
+Task3Main.multithreadedStreamMultiply                            3    2500  sample        6811.550          ms/op
+Task3Main.multithreadedStreamMultiply                            4    2500  sample        6861.881          ms/op
+Task3Main.multithreadedStreamMultiply                            5    2500  sample        6895.436          ms/op
+Task3Main.multithreadedStreamMultiply                            6    2500  sample        6610.223          ms/op
+Task3Main.multithreadedStreamMultiply                            7    2500  sample        6937.379          ms/op
+Task3Main.multithreadedStreamMultiply                            8    2500  sample        6568.280          ms/op
+Task3Main.multithreadedStreamMultiply                            9    2500  sample        7029.654          ms/op
+Task3Main.multithreadedStreamMultiply                           10    2500  sample        6794.772          ms/op
+Task3Main.multithreadedStreamMultiply                           11    2500  sample        6945.767          ms/op
+Task3Main.multithreadedStreamMultiply                           12    2500  sample        6878.659          ms/op
+Task3Main.multithreadedStreamMultiply                           13    2500  sample        6895.436          ms/op
+Task3Main.multithreadedStreamMultiply                           14    2500  sample        6559.891          ms/op
+Task3Main.multithreadedStreamMultiply                           15    2500  sample        6803.161          ms/op
+Task3Main.multithreadedStreamMultiply                           16    2500  sample        6660.555          ms/op
+Task3Main.multithreadedStreamMultiply                           17    2500  sample        6257.902          ms/op
+Task3Main.multithreadedStreamMultiply                           18    2500  sample        6308.233          ms/op
+Task3Main.multithreadedStreamMultiply                           19    2500  sample        6861.881          ms/op
+Task3Main.multithreadedStreamMultiply                           20    2500  sample        7138.705          ms/op
+Task3Main.multithreadedStreamMultiply                           21    2500  sample        6836.716          ms/op
+Task3Main.multithreadedStreamMultiply                           22    2500  sample        6794.772          ms/op
+Task3Main.multithreadedStreamMultiply                           23    2500  sample        6811.550          ms/op
+Task3Main.multithreadedStreamMultiply                           24    2500  sample        6551.503          ms/op

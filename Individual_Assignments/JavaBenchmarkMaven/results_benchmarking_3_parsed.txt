@@ -1,0 +1,114 @@
+Benchmark                                    (size)       Score   r  Units
+Task3Main.standardMultiply                        1      ≈ 10⁻⁵     ms/op
+Task3Main.standardMultiply                        5      ≈ 10⁻⁴     ms/op
+Task3Main.standardMultiply                       10       0.001     ms/op
+Task3Main.standardMultiply                       50       0.068     ms/op
+Task3Main.standardMultiply                      100       0.585     ms/op
+Task3Main.standardMultiply                      200       5.177     ms/op
+Task3Main.standardMultiply                      300      18.821     ms/op
+Task3Main.standardMultiply                      500      90.156     ms/op
+Task3Main.standardMultiply                     1000      1254.097   ms/op
+Task3Main.standardMultiply                     1500      5377.098   ms/op
+Task3Main.standardMultiply                     2000     15116.272   ms/op
+Task3Main.blockedColumnMultiply                   1      ≈ 10⁻⁴     ms/op
+Task3Main.blockedColumnMultiply                   5      ≈ 10⁻³     ms/op
+Task3Main.blockedColumnMultiply                  10       0.001     ms/op
+Task3Main.blockedColumnMultiply                  50       0.074     ms/op
+Task3Main.blockedColumnMultiply                 100       0.343     ms/op
+Task3Main.blockedColumnMultiply                 200       5.530     ms/op
+Task3Main.blockedColumnMultiply                 300      10.071     ms/op
+Task3Main.blockedColumnMultiply                 500      78.610     ms/op
+Task3Main.blockedColumnMultiply                1000     463.471     ms/op
+Task3Main.blockedColumnMultiply                1500      2462.056   ms/op
+Task3Main.blockedColumnMultiply                2000      4588.569   ms/op
+Task3Main.multithreadedExecutorMultiply           1       0.038     ms/op
+Task3Main.multithreadedExecutorMultiply           5       0.112     ms/op
+Task3Main.multithreadedExecutorMultiply          10       0.161     ms/op
+Task3Main.multithreadedExecutorMultiply          50       0.358     ms/op
+Task3Main.multithreadedExecutorMultiply         100       0.658     ms/op
+Task3Main.multithreadedExecutorMultiply         200       2.097     ms/op
+Task3Main.multithreadedExecutorMultiply         300       3.676     ms/op
+Task3Main.multithreadedExecutorMultiply         500      18.985     ms/op
+Task3Main.multithreadedExecutorMultiply        1000     160.919     ms/op
+Task3Main.multithreadedExecutorMultiply        1500     783.811     ms/op
+Task3Main.multithreadedExecutorMultiply        2000      2044.723   ms/op
+Task3Main.multithreadedStreamMultiply             1      ≈ 10⁻⁴     ms/op
+Task3Main.multithreadedStreamMultiply             5       0.008     ms/op
+Task3Main.multithreadedStreamMultiply            10       0.017     ms/op
+Task3Main.multithreadedStreamMultiply            50       0.047     ms/op
+Task3Main.multithreadedStreamMultiply           100       0.210     ms/op
+Task3Main.multithreadedStreamMultiply           200       0.922     ms/op
+Task3Main.multithreadedStreamMultiply           300       2.863     ms/op
+Task3Main.multithreadedStreamMultiply           500      18.068     ms/op
+Task3Main.multithreadedStreamMultiply          1000     194.598     ms/op
+Task3Main.multithreadedStreamMultiply          1500     782.238     ms/op
+Task3Main.multithreadedStreamMultiply          2000     2659.189   ms/op
+Task3Main.multithreadedBlockedColumnMultiply      1       0.039     ms/op
+Task3Main.multithreadedBlockedColumnMultiply      5       0.146     ms/op
+Task3Main.multithreadedBlockedColumnMultiply     10       0.317     ms/op
+Task3Main.multithreadedBlockedColumnMultiply     50       0.346     ms/op
+Task3Main.multithreadedBlockedColumnMultiply    100       0.490     ms/op
+Task3Main.multithreadedBlockedColumnMultiply    200       1.060     ms/op
+Task3Main.multithreadedBlockedColumnMultiply    300       3.301     ms/op
+Task3Main.multithreadedBlockedColumnMultiply    500      14.231     ms/op
+Task3Main.multithreadedBlockedColumnMultiply   1000      70.368     ms/op
+Task3Main.multithreadedBlockedColumnMultiply   1500     266.928     ms/op
+Task3Main.multithreadedBlockedColumnMultiply   2000     546.832     ms/op
+
+
+
+-------------------------------------
+Thread num impact
+-------------------------------------
+Benchmark                                             (numThreads)         Score          Units
+Task3Main.multithreadedBlockedColumnMultiply                     0      1279.263          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                     1      6652.166          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                     2      4294.967          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                     3      3061.842          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                     4      2348.810          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                     5      2069.889          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                     6      1772.093          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                     7      1740.636          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                     8      1688.207          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                     9      1497.367          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                    10      1530.921          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                    11      1228.931          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                    12      1319.109          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                    13      1344.274          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                    14      1457.521          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                    15      1407.189          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                    16      1600.127          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                    17      1413.480          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                    18      1533.018          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                    19      1405.092          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                    20      1528.824          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                    21      1199.571          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                    22      1346.372          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                    23      1245.708          ms/op
+Task3Main.multithreadedBlockedColumnMultiply                    24      1312.817          ms/op
+Task3Main.multithreadedExecutorMultiply                          0      5435.818          ms/op
+Task3Main.multithreadedExecutorMultiply                          1     39929.774          ms/op
+Task3Main.multithreadedExecutorMultiply                          2     20602.421          ms/op
+Task3Main.multithreadedExecutorMultiply                          3     13807.649          ms/op
+Task3Main.multithreadedExecutorMultiply                          4     10687.087          ms/op
+Task3Main.multithreadedExecutorMultiply                          5      8539.603          ms/op
+Task3Main.multithreadedExecutorMultiply                          6      8724.152          ms/op
+Task3Main.multithreadedExecutorMultiply                          7      7683.965          ms/op
+Task3Main.multithreadedExecutorMultiply                          8      7415.529          ms/op
+Task3Main.multithreadedExecutorMultiply                          9      7230.980          ms/op
+Task3Main.multithreadedExecutorMultiply                         10      6870.270          ms/op
+Task3Main.multithreadedExecutorMultiply                         11      6786.384          ms/op
+Task3Main.multithreadedExecutorMultiply                         12      6417.285          ms/op
+Task3Main.multithreadedExecutorMultiply                         13      6954.156          ms/op
+Task3Main.multithreadedExecutorMultiply                         14      6509.560          ms/op
+Task3Main.multithreadedExecutorMultiply                         15      6887.047          ms/op
+Task3Main.multithreadedExecutorMultiply                         16      6190.793          ms/op
+Task3Main.multithreadedExecutorMultiply                         17      6308.233          ms/op
+Task3Main.multithreadedExecutorMultiply                         18      6509.560          ms/op
+Task3Main.multithreadedExecutorMultiply                         19      6224.347          ms/op
+Task3Main.multithreadedExecutorMultiply                         20      6257.902          ms/op
+Task3Main.multithreadedExecutorMultiply                         21      6383.731          ms/op
+Task3Main.multithreadedExecutorMultiply                         22      6090.129          ms/op
+Task3Main.multithreadedExecutorMultiply                         23      6417.285          ms/op
+Task3Main.multithreadedExecutorMultiply                         24      5771.362          ms/op
+
