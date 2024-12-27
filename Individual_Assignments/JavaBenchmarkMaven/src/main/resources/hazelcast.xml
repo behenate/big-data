@@ -1,0 +1,22 @@
+<hazelcast xmlns="http://www.hazelcast.com/schema/config"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://www.hazelcast.com/schema/config
+    http://www.hazelcast.com/schema/config/hazelcast-config-4.0.xsd">
+
+    <cluster-name>dev-cluster</cluster-name>
+
+    <network>
+        <join>
+            <multicast enabled="true">
+                <multicast-group>224.2.2.3</multicast-group>
+                <multicast-port>54327</multicast-port>
+            </multicast>
+            <tcp-ip enabled="false"/>
+        </join>
+    </network>
+
+    <map name="default">
+        <!-- Default map configuration -->
+    </map>
+
+</hazelcast>

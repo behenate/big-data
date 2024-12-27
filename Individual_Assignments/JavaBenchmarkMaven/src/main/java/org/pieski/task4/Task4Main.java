@@ -10,6 +10,7 @@ import org.openjdk.jmh.runner.options.Options;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
 import org.pieski.task2.*;
 
+import java.io.FileNotFoundException;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
@@ -51,17 +52,7 @@ public class Task4Main {
   }
 
   public static void main(String[] args) throws RunnerException {
-    Config config = new Config();
-    NetworkConfig network = config.getNetworkConfig();
-    JoinConfig join = network.getJoin();
-    join.getTcpIpConfig().setEnabled(false);
-
-    MulticastConfig multicastConfig = join.getMulticastConfig();
-    multicastConfig.setEnabled(true);
-    multicastConfig.setMulticastGroup("224.2.2.3");
-    multicastConfig.setMulticastPort(54327);
-
-
+    Config config = new XmlConfigBuilder(Task4Main.class.getResourceAsStream("/hazelcast.xml")).build();
     config.getSerializationConfig().addSerializerConfig(
         new SerializerConfig()
             .setTypeClass(MultiplierNode.class)
