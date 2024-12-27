@@ -1,9 +1,6 @@
 package org.pieski.task4;
 
-import com.hazelcast.config.Config;
-import com.hazelcast.config.JoinConfig;
-import com.hazelcast.config.NetworkConfig;
-import com.hazelcast.config.SerializerConfig;
+import com.hazelcast.config.*;
 import com.hazelcast.core.Hazelcast;
 import com.hazelcast.core.HazelcastInstance;
 import org.openjdk.jmh.annotations.*;
@@ -57,9 +54,13 @@ public class Task4Main {
     Config config = new Config();
     NetworkConfig network = config.getNetworkConfig();
     JoinConfig join = network.getJoin();
-
-    join.getMulticastConfig().setEnabled(true);
     join.getTcpIpConfig().setEnabled(false);
+
+    MulticastConfig multicastConfig = join.getMulticastConfig();
+    multicastConfig.setEnabled(true);
+    multicastConfig.setMulticastGroup("224.2.2.3");
+    multicastConfig.setMulticastPort(54327);
+
 
     config.getSerializationConfig().addSerializerConfig(
         new SerializerConfig()
@@ -77,7 +78,6 @@ public class Task4Main {
         throw new RuntimeException(e);
       }
       System.out.println("Only one instance, waiting for more to register!");
-
     }
 
     double[][] matrix1 = generateMatrix(64, false);
