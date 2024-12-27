@@ -9,6 +9,7 @@ import org.openjdk.jmh.runner.RunnerException;
 import org.openjdk.jmh.runner.options.Options;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
 import org.pieski.task2.*;
+import org.pieski.task3.MultithreadedBlockedColumnMultiplier;
 
 import java.io.FileNotFoundException;
 import java.util.Random;
@@ -62,17 +63,19 @@ public class Task4Main {
     HazelcastInstance instance1 = Hazelcast.newHazelcastInstance(config);
     int cnt = 10;
 
-    while (instance1.getCluster().getMembers().size() < 2 || cnt < 5) {
-      try {
-        Thread.sleep(1000);
-      } catch (InterruptedException e) {
-        throw new RuntimeException(e);
-      }
-      System.out.println("Only one instance, waiting for more to register!");
-    }
+//    while (instance1.getCluster().getMembers().size() < 2 || cnt < 5) {
+//      try {
+//        Thread.sleep(1000);
+//      } catch (InterruptedException e) {
+//        throw new RuntimeException(e);
+//      }
+//      System.out.println("Only one instance, waiting for more to register!");
+//    }
 
-    double[][] matrix1 = generateMatrix(64, false);
-    double[][] matrix2 = generateMatrix(64, false);
+
+    double[][] matrix1 = generateMatrix(2000, false);
+    double[][] matrix2 = generateMatrix(2000, false);
+
     MatrixMultiplicationDistributor distributor = new MatrixMultiplicationDistributor(matrix1, matrix2, instance1, "executor");
     distributor.multiply();
   }

@@ -38,7 +38,11 @@ public class MultiplierNode implements MatrixMultiplier, Callable<double[][]> {
 
   @Override
   public double[][] call() throws Exception {
+    long startTime = System.currentTimeMillis();
     double[][] result =  internalMultiplier.multiply();
+    long endTime = System.currentTimeMillis();
+    long duration = endTime - startTime;
+    System.out.println("Task finished, multiplying the range " + columnStart +"-"+ columnEnd + " took: " + duration + "ms");
     return result;
   }
 

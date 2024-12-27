@@ -59,9 +59,8 @@ public class MatrixMultiplicationDistributor implements MatrixMultiplier {
         int futColumnStart = future.rangeStart();
         int futColumnEnd = future.rangeEnd();
         for (int i = 0; i < result.length; i++) {
-          for (int j = futColumnStart; j < futColumnEnd; j++) {
-            result[i][j] = partResult[i][j];
-          }
+          if (futColumnEnd - futColumnStart >= 0)
+            System.arraycopy(partResult[i], futColumnStart, result[i], futColumnStart, futColumnEnd - futColumnStart);
         }
       } catch (InterruptedException | ExecutionException e) {
         throw new RuntimeException(e);
@@ -70,13 +69,6 @@ public class MatrixMultiplicationDistributor implements MatrixMultiplier {
     System.out.println("DISTRIBUTOR GOT THE RESULTS");
     long endTime = System.currentTimeMillis();
     System.out.println("Finished in: " + (endTime - startTime) + "ms");
-    for (int i = 0; i < 64; i++) {
-      for (int j = 0; j < 64; j++) {
-        System.out.print(result[i][j] + " ");
-      }
-      System.out.println("");
-    }
-
     instance.shutdown();
     return result;
   }
