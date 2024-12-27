@@ -1,6 +1,8 @@
 package org.pieski.task4;
 
 import com.hazelcast.config.Config;
+import com.hazelcast.config.JoinConfig;
+import com.hazelcast.config.NetworkConfig;
 import com.hazelcast.config.SerializerConfig;
 import com.hazelcast.core.Hazelcast;
 import com.hazelcast.core.HazelcastInstance;
@@ -53,6 +55,12 @@ public class Task4Main {
 
   public static void main(String[] args) throws RunnerException {
     Config config = new Config();
+    NetworkConfig network = config.getNetworkConfig();
+    JoinConfig join = network.getJoin();
+
+    join.getMulticastConfig().setEnabled(true);
+    join.getTcpIpConfig().setEnabled(false);
+
     config.getSerializationConfig().addSerializerConfig(
         new SerializerConfig()
             .setTypeClass(MultiplierNode.class)
@@ -60,7 +68,6 @@ public class Task4Main {
     );
 
     HazelcastInstance instance1 = Hazelcast.newHazelcastInstance(config);
-    HazelcastInstance instance2;
     int cnt = 10;
 
     while (instance1.getCluster().getMembers().size() < 2 || cnt < 5) {
@@ -70,10 +77,6 @@ public class Task4Main {
         throw new RuntimeException(e);
       }
       System.out.println("Only one instance, waiting for more to register!");
-      if (cnt >= 5) {
-        instance2 = Hazelcast.newHazelcastInstance(config);
-      }
-      cnt += 1;
 
     }
 
