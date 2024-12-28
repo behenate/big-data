@@ -1,7 +1,6 @@
 package org.pieski.task4;
 
 import com.hazelcast.cluster.Member;
-import com.hazelcast.core.Hazelcast;
 import com.hazelcast.core.HazelcastInstance;
 import com.hazelcast.core.IExecutorService;
 import org.pieski.task2.MatrixMultiplier;
@@ -32,7 +31,26 @@ public class MatrixMultiplicationDistributor implements MatrixMultiplier {
   public double[][] multiply() {
     IExecutorService executor = instance.getExecutorService(executorName);
 
-    List<RangedFuture<double[][]>> futures = new ArrayList<>();
+    // PREPARE THE MEMBERS FOR EXECUTION
+    List<Future<Void>> preparationFutures = new ArrayList<>();
+
+    for (Member member : instance.getCluster().getMembers()) {
+      PrepareExecutionTask task = new PrepareExecutionTask(matA,matB);
+      Future<Void> future = executor.submitToMember(task, member);
+      preparationFutures.add(future);
+    }
+
+    for (Future<Void> future : preparationFutures) {
+      try {
+        future.get();
+      } catch (InterruptedException | ExecutionException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    // MULTIPLICATION
+
+    List<Future<Void>> multiplicationFutures = new ArrayList<>();
 
     int numCols = matB[0].length;
     int numMembers = instance.getCluster().getMembers().size();
@@ -43,32 +61,54 @@ public class MatrixMultiplicationDistributor implements MatrixMultiplier {
     for (Member member : instance.getCluster().getMembers()) {
       int columnEnd = columnStart + blockSize;
       if (columnEnd > numCols) columnEnd = numCols;
-      Callable<double[][]> task = new MultiplierNode(matA, matB, columnStart, columnEnd);
-      Future<double[][]> future = executor.submitToMember(task, member);
-      RangedFuture<double[][]> rangedFuture = new RangedFuture<>(future, columnStart, columnEnd);
-      futures.add(rangedFuture);
+      Callable<Void> task = new ExecuteTask(columnStart, columnEnd);
+      Future<Void> future = executor.submit(task);
+      multiplicationFutures.add(future);
       columnStart += blockSize;
     }
     long startTime = System.currentTimeMillis();
     System.out.println("DISTRIBUTOR ENDED DISTRIBUTION, WAITING FOR RESULTS");
 
-    // Collect results
-    for (RangedFuture<double[][]> future : futures) {
+    // Wait for the calculations to finish
+    for (Future<Void> future : multiplicationFutures) {
       try {
-        double[][] partResult = future.future().get();
-        int futColumnStart = future.rangeStart();
-        int futColumnEnd = future.rangeEnd();
-        for (int i = 0; i < result.length; i++) {
-          if (futColumnEnd - futColumnStart >= 0)
-            System.arraycopy(partResult[i], futColumnStart, result[i], futColumnStart, futColumnEnd - futColumnStart);
+         future.get();
+      } catch (InterruptedException | ExecutionException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    System.out.println("CALCULATIONS FINISHED");
+    long endTime = System.currentTimeMillis();
+    System.out.println("Finished in: " + (endTime - startTime) + "ms");
+
+    // Gathering of the results
+    System.out.println("GATHERING RESULTS");
+    List<Future<FinishExecutionTaskResult>> resultFutures = new ArrayList<>();
+
+    for (Member member : instance.getCluster().getMembers()) {
+      Callable<FinishExecutionTaskResult> task = new FinishExecutionTask();
+      Future<FinishExecutionTaskResult> future = executor.submit(task);
+      resultFutures.add(future);
+    }
+
+    for (Future<FinishExecutionTaskResult> future: resultFutures) {
+      try {
+        FinishExecutionTaskResult taskResult = future.get();
+        int[] starts = taskResult.calculatedStarts();
+        int[] ends = taskResult.calculatedEnds();
+        double[][] partialResult = taskResult.result();
+        for (int i = 0; i < starts.length; i++) {
+          for (int y = 0; y < result.length; y++) {
+            if (ends[i] - starts[i] >= 0)
+              System.arraycopy(partialResult[y], starts[i], result[y], starts[i], ends[i] - starts[i]);
+          }
         }
       } catch (InterruptedException | ExecutionException e) {
         throw new RuntimeException(e);
       }
     }
-    System.out.println("DISTRIBUTOR GOT THE RESULTS");
-    long endTime = System.currentTimeMillis();
-    System.out.println("Finished in: " + (endTime - startTime) + "ms");
+
     instance.shutdown();
     return result;
   }

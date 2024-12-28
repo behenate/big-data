@@ -11,8 +11,8 @@ public class MultithreadedLimitedBlockedColumnMultiplier implements MatrixMultip
   private final int columnStart;  // Start column (inclusive)
   private final int columnEnd;    // End column (exclusive)
 
-  public MultithreadedLimitedBlockedColumnMultiplier(double[][] matA, double[][] matB, int numThreads, int columnStart, int columnEnd) {
-    this.result = MatrixMultiplier.generateEmpty(matA.length);
+  public MultithreadedLimitedBlockedColumnMultiplier(double[][] matA, double[][] matB, double[][] result, int numThreads, int columnStart, int columnEnd) {
+    this.result = result;
     this.matA = matA;
     this.matB = matB;
     this.numThreads = numThreads;

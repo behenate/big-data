@@ -4,14 +4,9 @@ import com.hazelcast.config.*;
 import com.hazelcast.core.Hazelcast;
 import com.hazelcast.core.HazelcastInstance;
 import org.openjdk.jmh.annotations.*;
-import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.RunnerException;
-import org.openjdk.jmh.runner.options.Options;
-import org.openjdk.jmh.runner.options.OptionsBuilder;
 import org.pieski.task2.*;
-import org.pieski.task3.MultithreadedBlockedColumnMultiplier;
 
-import java.io.FileNotFoundException;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
@@ -26,8 +21,6 @@ public class Task4Main {
   public int size = 1000;
   @Param({"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"})
   public int numThreads = 0; // 0 For max amount of threads
-  private double[][] matrix1;
-  private double[][] matrix2;
 
   private MatrixMultiplier standardMatrixMultiplier;
 
@@ -54,23 +47,40 @@ public class Task4Main {
 
   public static void main(String[] args) throws RunnerException {
     Config config = new XmlConfigBuilder(Task4Main.class.getResourceAsStream("/hazelcast.xml")).build();
-    config.getSerializationConfig().addSerializerConfig(
-        new SerializerConfig()
-            .setTypeClass(MultiplierNode.class)
-            .setImplementation(new MultiplierNodeSerializer())
-    );
+    config.getSerializationConfig()
+        .addSerializerConfig(
+            new SerializerConfig()
+                .setTypeClass(ExecuteTask.class)
+                .setImplementation(new ExecuteTaskSerializer()
+                )
+        )
+        .addSerializerConfig(
+            new SerializerConfig()
+                .setTypeClass(FinishExecutionTaskResult.class)
+                .setImplementation(new FinishExecutionTaskResultSerializer()
+                )
+        )
+        .addSerializerConfig(
+            new SerializerConfig()
+                .setTypeClass(PrepareExecutionTask.class)
+                .setImplementation(new PrepareExecutionTaskSerializer()
+                )
+        );
+
 
     HazelcastInstance instance1 = Hazelcast.newHazelcastInstance(config);
+    HazelcastInstance instance2 = Hazelcast.newHazelcastInstance(config);
+
     int cnt = 10;
 
-//    while (instance1.getCluster().getMembers().size() < 2 || cnt < 5) {
-//      try {
-//        Thread.sleep(1000);
-//      } catch (InterruptedException e) {
-//        throw new RuntimeException(e);
-//      }
-//      System.out.println("Only one instance, waiting for more to register!");
-//    }
+    while (instance1.getCluster().getMembers().size() < 2 || cnt < 5) {
+      try {
+        Thread.sleep(1000);
+      } catch (InterruptedException e) {
+        throw new RuntimeException(e);
+      }
+      System.out.println("Only one instance, waiting for more to register!");
+    }
 
 
     double[][] matrix1 = generateMatrix(2000, false);
