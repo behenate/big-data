@@ -10,9 +10,9 @@ public class MultithreadedBlockedColumnMultiplier implements MatrixMultiplier {
   private final int numThreads;
 
   public MultithreadedBlockedColumnMultiplier(double[][] matA, double[][] matB, int numThreads) {
-    this.result = MatrixMultiplier.generateEmpty(matA.length);
     this.matA = matA;
     this.matB = matB;
+    this.result = MatrixMultiplier.generateEmpty(matA.length);
     this.numThreads = numThreads;
   }
 

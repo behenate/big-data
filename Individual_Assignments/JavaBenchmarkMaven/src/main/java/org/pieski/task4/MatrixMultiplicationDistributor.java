@@ -7,9 +7,11 @@ import org.pieski.task2.MatrixMultiplier;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
+import java.util.concurrent.atomic.AtomicReference;
 
 record RangedFuture<T>(Future<T> future, int rangeStart, int rangeEnd) {}
 
@@ -28,7 +30,8 @@ public class MatrixMultiplicationDistributor implements MatrixMultiplier {
     this.instance = instance;
     this.executorName = executorName;
   }
-  public double[][] multiply() {
+
+  public void prepare() {
     IExecutorService executor = instance.getExecutorService(executorName);
 
     // PREPARE THE MEMBERS FOR EXECUTION
@@ -48,32 +51,58 @@ public class MatrixMultiplicationDistributor implements MatrixMultiplier {
       }
     }
 
+  }
+
+  public double[][] multiply() {
+    IExecutorService executor = instance.getExecutorService(executorName);
+    Member[] members = instance.getCluster().getMembers().toArray(new Member[0]);
+    ArrayList<Callable<Void>> tasksToExecute = new ArrayList<>();
+    AtomicReference<Integer> executedTasks = new AtomicReference<>(0);
+
     // MULTIPLICATION
-
-    List<Future<Void>> multiplicationFutures = new ArrayList<>();
-
     int numCols = matB[0].length;
     int numMembers = instance.getCluster().getMembers().size();
-    int blockSize = numCols / numMembers;
+    int blockSize = numCols / (numMembers*10);
 
-    System.out.println("DISTRIBUTOR  STARTING DISTRIBUTION");
     int columnStart = 0;
-    for (Member member : instance.getCluster().getMembers()) {
-      int columnEnd = columnStart + blockSize;
-      if (columnEnd > numCols) columnEnd = numCols;
+    int columnEnd = columnStart + blockSize;
+    while (columnEnd <= numCols) {
       Callable<Void> task = new ExecuteTask(columnStart, columnEnd);
-      Future<Void> future = executor.submit(task);
-      multiplicationFutures.add(future);
+      tasksToExecute.add(task);
       columnStart += blockSize;
+      columnEnd = columnStart + blockSize;
     }
+
+    Thread[] threads = new Thread[members.length];
+
     long startTime = System.currentTimeMillis();
     System.out.println("DISTRIBUTOR ENDED DISTRIBUTION, WAITING FOR RESULTS");
 
+    // This should automatically balance the tasks across nodes, more powerful nodes should get more tasks.
+    for (int i = 0; i < members.length; i++) {
+      int finalI = i;
+      Thread thread = new Thread(() -> {
+        int mytask = executedTasks.updateAndGet(v -> v + 1) - 1;
+        while (mytask < tasksToExecute.size()) {
+          try {
+            executor.submitToMember(tasksToExecute.get(mytask), members[finalI]).get();
+          } catch (InterruptedException | ExecutionException e) {
+            throw new RuntimeException(e);
+          } catch (IndexOutOfBoundsException e) {
+            return;
+          }
+          mytask = executedTasks.updateAndGet(v -> v + 1) - 1;
+        }
+      });
+      threads[i] = thread;
+      thread.start();
+    }
+
     // Wait for the calculations to finish
-    for (Future<Void> future : multiplicationFutures) {
+    for (Thread thread: threads) {
       try {
-         future.get();
-      } catch (InterruptedException | ExecutionException e) {
+        thread.join();
+      } catch (InterruptedException e) {
         throw new RuntimeException(e);
       }
     }
@@ -81,6 +110,12 @@ public class MatrixMultiplicationDistributor implements MatrixMultiplier {
     System.out.println("CALCULATIONS FINISHED");
     long endTime = System.currentTimeMillis();
     System.out.println("Finished in: " + (endTime - startTime) + "ms");
+
+    return result;
+  }
+
+  public double[][] gatherResults() {
+    IExecutorService executor = instance.getExecutorService(executorName);
 
     // Gathering of the results
     System.out.println("GATHERING RESULTS");
