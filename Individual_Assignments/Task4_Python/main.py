@@ -78,7 +78,7 @@ if __name__ == "__main__":
 
     hz_map = client.get_map("matrix_map").blocking()
 
-    size = 10
+    size = 500
     # Matrices to multiply
     matrix_a = np.random.rand(size, size)
     matrix_b = np.random.rand(size, size)
