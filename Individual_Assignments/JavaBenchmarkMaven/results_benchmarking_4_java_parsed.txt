@@ -1,0 +1,27 @@
+Benchmark                                 (size)        Score    Error  Units
+Task4Main.MBCMultiply                         50        0.407 ±  0.014  ms/op
+Task4Main.MBCMultiply                        100        0.467 ±  0.010  ms/op
+Task4Main.MBCMultiply                        200        1.087 ±  0.028  ms/op
+Task4Main.MBCMultiply                        300        2.688 ±  0.104  ms/op
+Task4Main.MBCMultiply                        500       11.051 ±  0.580  ms/op
+Task4Main.MBCMultiply                       1000       70.456 ±  8.939  ms/op
+Task4Main.MBCMultiply                       1500      218.261 ± 55.503  ms/op
+Task4Main.MBCMultiply                       2000      526.909           ms/op
+Task4Main.MBCMultiply                       2500     1047.527           ms/op
+Task4Main.MBCMultiply                       3000     2181.038           ms/op
+Task4Main.MBCMultiply                       4000     6668.943           ms/op
+Task4Main.MBCMultiply                       4500    10150.216           ms/op
+Task4Main.MBCMultiply                       5000    13136.560           ms/op
+Task4Main.distributedMBCMultiply              50       18.121 ±  6.635  ms/op
+Task4Main.distributedMBCMultiply             100       12.509 ±  1.602  ms/op
+Task4Main.distributedMBCMultiply             200       14.723 ±  4.002  ms/op
+Task4Main.distributedMBCMultiply             300       13.993 ±  1.944  ms/op
+Task4Main.distributedMBCMultiply             500       28.535 ±  6.760  ms/op
+Task4Main.distributedMBCMultiply            1000       78.764 ± 11.302  ms/op
+Task4Main.distributedMBCMultiply            1500      215.640 ± 76.539  ms/op
+Task4Main.distributedMBCMultiply            2000      667.419           ms/op
+Task4Main.distributedMBCMultiply            2500     1124.073           ms/op
+Task4Main.distributedMBCMultiply            3000     1730.150           ms/op
+Task4Main.distributedMBCMultiply            4000     3988.783           ms/op
+Task4Main.distributedMBCMultiply            4500     5318.377           ms/op
+Task4Main.distributedMBCMultiply:p1.00      5000     9697.231          ms/op
